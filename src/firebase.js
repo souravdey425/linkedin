@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 // import { getStorage, ref } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyByQwBfDHFlI-7qEvaPpLN3-ZMHfvd1olE",
-  authDomain: "linkedin-clone-32c58.firebaseapp.com",
-  projectId: "linkedin-clone-32c58",
-  storageBucket: "linkedin-clone-32c58.appspot.com",
-  messagingSenderId: "374713542740",
-  appId: "1:374713542740:web:bcf23c10c0256f57e8a5c1",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
